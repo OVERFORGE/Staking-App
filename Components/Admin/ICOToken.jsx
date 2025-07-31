@@ -81,6 +81,65 @@ const ICOToken = ({ setLoader }) => {
               <ButtonCmp name={"Update Token Price"} tab={"f10"} />
               <ButtonCmp name={"Withdraw Token"} tab={"f11"} />
             </ul>
+            <div className="tab-content">
+              {/* 1 */}
+              <div
+                className="tab-pane fade show active"
+                id="tab-f9"
+                role="tabpanel"
+              >
+                <div className="row">
+                  <Title title={"Update Token Address in ICO Contract"} />
+                  <InputField
+                    size={"12"}
+                    type={"text"}
+                    title={"Address"}
+                    name={"crypto"}
+                    placeholder={`${tokenDetails?.token.symbol} ${tokenDetails?.token.name}`}
+                    handleChange={(e) => setUpdateToken(e.target.value)}
+                  />
+
+                  <ClickButton
+                    name={"Update Token"}
+                    handleClick={() =>
+                      CALLING_FUNCTION_UPDATE_TOKEN(updateToken)
+                    }
+                  />
+                </div>
+              </div>
+              {/* 2 */}
+              <div className="tab-pane fade " id="tab-f10" role="tabpanel">
+                <div className="row">
+                  <Title title={"Update Token Price in ICO Contract"} />
+                  <InputField
+                    size={"12"}
+                    type={"text"}
+                    title={"Price"}
+                    name={"price1"}
+                    placeholder={`${tokenDetails?.tokenPrice} ${CURRENCY}`}
+                    handleChange={(e) => setUpdatePrice(e.target.value)}
+                  />
+
+                  <ClickButton
+                    name={"Update Token"}
+                    handleClick={() =>
+                      CALLING_FUNCTION_UPDATE_PRICE(updatePrice)
+                    }
+                  />
+                </div>
+              </div>
+              {/* 3 */}
+              <div className="tab-pane fade " id="tab-f11" role="tabpanel">
+                <div className="row">
+                  <Title title={"Withdraw token from ICO Contract"} />
+
+                  <ClickButton
+                    name={"Withdraw All Token"}
+                    handleClick={() => CALLING_FUNCTION_TOKEN_WITHDRAW()}
+                  />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
