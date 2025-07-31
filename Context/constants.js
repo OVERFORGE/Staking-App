@@ -80,11 +80,15 @@ export const ERC20 = async (address, userAddress) => {
 export const LOAD_TOKEN_ICO = async () => {
   try {
     const contract = await TOKEN_ICO_CONTRACT();
+    console.log("This is contract:", contract);
+    console.log("Contract address:", contract.address);
+
     const tokenAddress = await contract.tokenAddress();
+    console.log("Returned tokenAddress:", tokenAddress);
 
-    const ZERO_ADDRSEE = 0x0000000000000000000000000000000000000000;
+    const ZERO_ADDRESS = "0x0000000000000000000000000000000000000000";
 
-    if (tokenAddress != ZERO_ADDRSEE) {
+    if (tokenAddress.toLowerCase() !== ZERO_ADDRESS.toLowerCase()) {
       const tokenDetails = await contract.getTokenDetails();
       const contractOwner = await contract.owner();
       const soldTokens = await contract.soldTokens();
@@ -104,6 +108,8 @@ export const LOAD_TOKEN_ICO = async () => {
         token: ICO_TOKEN,
       };
       return token;
+    } else {
+      console.log("Zero address detected — token not set in ICO contract.");
     }
   } catch (error) {
     console.log(error);
@@ -118,6 +124,7 @@ export const TOKEN_ICO_CONTRACT = async () => {
     const signer = provider.getSigner();
 
     const contractReader = new ethers.Contract(TOKEN_ICO, TokenICO.abi, signer);
+    console.log(`This is contractReader: ${contractReader}`);
     return contractReader;
   }
 };

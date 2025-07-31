@@ -1,7 +1,10 @@
 import React from "react";
 
+import { IoMdClose } from "./ReactICON";
+import { LOAD_TOKEN_ICO } from "../Context/constants";
+
 const ICOSale = () => {
-  return <div>ICOSale</div>;
+  return;
 };
 
 export default ICOSale;

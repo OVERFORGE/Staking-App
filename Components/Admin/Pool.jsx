@@ -174,7 +174,7 @@ const Pool = ({ poolDetails, createPool, setLoader, setModifyPoolID }) => {
                                   <a
                                     href=""
                                     className="header__profile"
-                                    data-bs-target="modal-apool"
+                                    data-bs-target="#modal-apool"
                                     type="button"
                                     data-bs-toggle="modal"
                                     onClick={() => setModifyPoolID(index)}

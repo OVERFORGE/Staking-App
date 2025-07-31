@@ -4,6 +4,7 @@ import Title from "./RegularComp/Title";
 import InputField from "./RegularComp/InputField";
 import ClickButton from "./RegularComp/ClickButton";
 
+import { LOAD_TOKEN_ICO } from "../../Context/constants";
 import {
   UPDATE_TOKEN,
   UPDATE_TOKEN_PRICE,
@@ -22,7 +23,7 @@ const ICOToken = ({ setLoader }) => {
     const loadToken = async () => {
       const token = await LOAD_TOKEN_ICO();
       setTokenDetails(token);
-      console.log(token);
+      console.log(`This is token Details : ${token}`);
     };
     loadToken();
   }, [address]);
@@ -135,7 +136,7 @@ const ICOToken = ({ setLoader }) => {
 
                   <ClickButton
                     name={"Withdraw All Token"}
-                    handleClick={() => CALLING_FUNCTION_TOKEN_WITHDRAW()}
+                    handleClick={() => CALLING_FUNCTION_WITHDRAW()}
                   />
                 </div>
               </div>
