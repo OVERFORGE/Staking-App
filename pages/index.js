@@ -88,6 +88,9 @@ const index = () => {
         claimReward={claimReward}
       />
       <ICOSale setLoader={setLoader} />
+
+      {contactUs && <Contact setContactUs={setContactUs} />}
+      {loader && <Loader />}
     </>
   );
 };
