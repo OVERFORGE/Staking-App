@@ -45,7 +45,43 @@ const PoolsModel = ({
               </i>
             </button>
             <h4 className="modal__title">Invest</h4>
-            <p className="modal__text">Welcome to Stoken</p>
+            <p className="modal__text">
+              Welcome to Stoken, stake your {selectedPool?.depositToken.name}{" "}
+              token to earn reward.
+            </p>
+            <div className="modal__form">
+              <PopUpInputField
+                title={`Stake ${selectedPool?.depositToken.name} token`}
+                placeholder="Amount"
+                handleChange={(e) => setAmount(e.target.value)}
+              />
+              <div className="form__group">
+                <label htmlFor="" className="form__label">
+                  Pool Details:
+                </label>
+                <ul className="form__radio">
+                  <InputRatio
+                    index={1}
+                    value={`Your Deposited: ${selectedPool?.amount} ${selectedPool?.depositToken.symbol}`}
+                  />
+                  <InputRatio
+                    index={2}
+                    value={`Total Deposited: ${selectedPool?.depositAmount} ${selectedPool?.depositToken.symbol}`}
+                  />
+                  <InputRatio
+                    index={3}
+                    value={`My Balance: ${selectedPool?.depositToken?.balance?.slice(
+                      0,
+                      8
+                    )} ${selectedPool?.depositToken.symbol}`}
+                  />
+                </ul>
+              </div>
+              <PupUpButton
+                title="Proceed"
+                handleClick={() => CALLING_FUNCTION(poolID, amount, address)}
+              />
+            </div>
           </div>
         </div>
       </div>

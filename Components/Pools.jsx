@@ -192,7 +192,7 @@ const Pools = ({
                         backgroundColor: "transparent",
                       }}
                       className="apool__input"
-                      placeholder={`${pool?.depositedAmount} ${pool?.depositToken.symbol}`}
+                      placeholder={`${pool?.depositAmount} ${pool?.depositToken.symbol}`}
                       disabled
                     />
                   </div>
