@@ -79,7 +79,9 @@ const PoolsModel = ({
               </div>
               <PupUpButton
                 title="Proceed"
-                handleClick={() => CALLING_FUNCTION(poolID, amount, address)}
+                handleClick={() => (
+                  console.log(poolID), CALLING_FUNCTION(poolID, amount, address)
+                )}
               />
             </div>
           </div>

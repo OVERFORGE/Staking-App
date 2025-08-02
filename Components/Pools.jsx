@@ -202,6 +202,7 @@ const Pools = ({
                     type="button"
                     data-bs-toggle="modal"
                     onClick={() => (
+                      console.log("This is index" + index),
                       setPoolID(
                         index == 0 ? 0 : index == 1 ? 1 : index == 2 ? 2 : ""
                       ),
@@ -212,13 +213,15 @@ const Pools = ({
                     Invest
                   </button>
                   <span
-                    className={`block-icon block-icon--${(index = 0
-                      ? "orange"
-                      : index == 1
-                      ? "green"
-                      : index == 2
-                      ? "blue"
-                      : "orange")}`}
+                    className={`block-icon block-icon--${
+                      index == 0
+                        ? "orange"
+                        : index == 1
+                        ? "green"
+                        : index == 2
+                        ? "blue"
+                        : "orange"
+                    }`}
                   >
                     <MdOutlineAttachMoney
                       style={{ color: "white", fontSize: "1.5rem" }}
