@@ -14,7 +14,7 @@ const PoolsModel = ({
   const [amount, setAmount] = useState();
   const CALLING_FUNCTION = async (poolID, amount, address) => {
     setLoader(true);
-    console.log(pool);
+
     const receipt = await deposit(poolID, amount, address);
     if (receipt) {
       console.log(receipt);

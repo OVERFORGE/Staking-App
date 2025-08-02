@@ -201,14 +201,13 @@ const Pools = ({
                     data-bs-target="#modal-apool"
                     type="button"
                     data-bs-toggle="modal"
-                    onClick={
-                      (() =>
-                        setPoolID(
-                          index == 0 ? 0 : index == 1 ? 1 : index == 2 ? 2 : ""
-                        ),
+                    onClick={() => (
+                      setPoolID(
+                        index == 0 ? 0 : index == 1 ? 1 : index == 2 ? 2 : ""
+                      ),
                       setSelectedPool(pool),
-                      setSelectedToken(pool))
-                    }
+                      setSelectedToken(pool)
+                    )}
                   >
                     Invest
                   </button>

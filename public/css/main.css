@@ -151,7 +151,7 @@ body::-webkit-scrollbar-track {
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: #16142a;
+  background-color: #1c1c1e;
   outline: 0 solid rgba(255, 255, 255, 0.05);
 }
 
@@ -297,7 +297,7 @@ body::-webkit-scrollbar-thumb {
 
 .header__language-menu {
   position: absolute;
-  background-color: #16142a;
+  background-color: #1c1c1e;
   padding: 20px;
   display: flex !important;
   flex-direction: column;
@@ -414,7 +414,7 @@ body::-webkit-scrollbar-thumb {
 
 .header__dropdown-menu {
   position: absolute;
-  background-color: #16142a;
+  background-color: #1c1c1e;
   padding: 20px;
   display: flex !important;
   flex-direction: column;
@@ -1343,7 +1343,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .cta:hover {
-  border-color: rgba(160, 52, 250, 0.2);
+  border-color: #1c1c1e3d;
 }
 
 /*==============================
@@ -4754,7 +4754,7 @@ body::-webkit-scrollbar-thumb {
 ==============================*/
 
 .modal {
-  background: rgba(22, 20, 42, 0.8);
+  background: #1c1c1e3d;
 }
 
 .modal--auto .modal-content {
@@ -4832,7 +4832,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .modal-backdrop {
-  background: #16142a;
+  background: #111;
 }
 
 /*==============================
@@ -5152,7 +5152,7 @@ body::-webkit-scrollbar-thumb {
 ==============================*/
 
 .scrollbar-track-y {
-  background: rgba(160, 52, 250, 0.12) !important;
+  background: #1c1c1e3d !important;
   top: 0 !important;
   bottom: 0 !important;
   height: auto !important;
@@ -5172,7 +5172,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .scrollbar-track-x {
-  background: rgba(160, 52, 250, 0.12) !important;
+  background: #1c1c1e3d !important;
   left: 0 !important;
   right: 0 !important;
   height: 4px !important;
