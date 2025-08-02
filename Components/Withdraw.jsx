@@ -68,9 +68,11 @@ const Withdraw = ({ setWithdrawPoolID, poolDetails }) => {
                     data-bs-target="#modal-node"
                     type="button"
                     data-bs-toggle="modal"
-                    onClick={setWithdrawPoolID(
-                      index == 0 ? 0 : index == 1 ? 1 : index == 2 ? 2 : ""
-                    )}
+                    onClick={() =>
+                      setWithdrawPoolID(
+                        index == 0 ? 0 : index == 1 ? 1 : index == 2 ? 2 : ""
+                      )
+                    }
                   >
                     WITHDRAW / CLAIM
                   </button>

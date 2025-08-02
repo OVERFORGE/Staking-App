@@ -22,6 +22,17 @@ const WithdrawModal = ({
     }
     setLoader(false);
   };
+  const CALLING_CLAIM = async (withdrawPoolID) => {
+    setLoader(true);
+
+    const receipt = await claimReward(withdrawPoolID);
+    if (receipt) {
+      console.log(receipt);
+      setLoader(false);
+      window.location.reload();
+    }
+    setLoader(false);
+  };
   return (
     <div
       className="modal modal--auto fade"
@@ -48,6 +59,23 @@ const WithdrawModal = ({
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
               possimus eligendi dolore.
             </p>
+            <div className="modal__form">
+              <PopUpInputField
+                title={`Amount`}
+                placeholder="Amount"
+                handleChange={(e) => setAmount(e.target.value)}
+              />
+              <PupUpButton
+                title="Withdraw"
+                handleClick={() =>
+                  CALLING_FUNCTION(withdrawPoolID, amount, address)
+                }
+              />
+              <PupUpButton
+                title="Claim Reward"
+                handleClick={() => CALLING_CLAIM(withdrawPoolID)}
+              />
+            </div>
           </div>
         </div>
       </div>
