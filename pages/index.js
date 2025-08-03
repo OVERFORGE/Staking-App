@@ -41,6 +41,7 @@ const index = () => {
       setLoader(true);
       const data = await CONTRACT_DATA(address);
       setPoolDetails(data);
+
       setLoader(false);
     }
   };
