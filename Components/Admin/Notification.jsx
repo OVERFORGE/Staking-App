@@ -34,7 +34,7 @@ const Notification = ({ index, notify, poolDetails }) => {
         <h3 className="deposit__title">{notify?.typeOf}</h3>
       </div>
       <ul className="deposit__list">
-        <List name={"Pool ID"} value={`#00-1${notify?.pool}`} />
+        <List name={"Pool ID"} value={`#00-1${notify?.poolID}`} />
         <List name={"Date"} value={`${notify?.timestamp}`} />
         <List name={"Amount"} value={`${notify?.amount}`} />
         <List name={"User"} value={`${notify?.user}`} />

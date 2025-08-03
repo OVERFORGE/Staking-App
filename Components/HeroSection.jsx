@@ -109,7 +109,7 @@ const HeroSection = ({ poolDetails, addTokenMetaMask }) => {
                     {tokenDetails?.symbol}
                   </h3>
                   <div
-                    className="progressbar"
+                    className="progress"
                     role="progressbar"
                     aria-label="Animated striped"
                     aria-valuenow={75}
@@ -118,9 +118,7 @@ const HeroSection = ({ poolDetails, addTokenMetaMask }) => {
                   >
                     <div
                       className="progress-bar progress-bar-striped progress-bar-animated"
-                      style={{
-                        width: `${percentage}%`,
-                      }}
+                      style={{ width: `${percentage}%` }}
                     >
                       <span>{tokenDetails?.soldTokens}</span>
                     </div>
